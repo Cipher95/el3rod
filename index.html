@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/svg+xml" href="el3rod-jpg.webp">
+    <title>العروض el3rod</title>
+
+    <!-- NEW: Pixelated Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- New main wrapper for the game screen effect -->
+    <div class="mmsf-screen">
+        
+        <header class="mmsf-header">
+            <div id="main-title">el3rod</div>
+            <div class="header-right">
+                <div id="clock"></div>
+                <div id="date-day"></div>
+            </div>
+        </header>
+
+        <main id="content-area">
+            <!-- JavaScript will inject content here -->
+        </main>
+
+        <nav class="mmsf-nav">
+            <div class="nav-grid">
+                <!-- Changed to divs for easier styling -->
+                <div class="mmsf-button gold"><a href="#" class="nav-link active" data-page="home">الصفحة الرئيسية</a></div>
+                <div class="mmsf-button blue"><a href="#" class="nav-link" data-page="others">عروض الجمعيات</a></div>
+            </div>
+        </nav>
+
+        <!-- NEW: Status Bar to match the game UI -->
+        <footer class="mmsf-status-bar">
+            <div>-</div>
+            <div>العروض el3rod</div>
+            <div>-</div>
+        </footer>
+
+    </div>
+
+    <!-- NEW: Back to Top Button Added -->
+    <button id="back-to-top-btn" title="Go to top">▲</button>
+    <!-- NEW: Scroll to Bottom Button -->
+<button id="scroll-to-bottom-btn" title="Go to bottom">▼</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
