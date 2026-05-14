@@ -139,9 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const html = `
             <div class="content-wrapper">
-                <div class="content-image">
-                    <img src="${data.image}" alt="${data.title}">
-                </div>
 
                 <div class="content-text">
                     <h2>${data.title}</h2>
