@@ -63,8 +63,8 @@ body {
     padding: 5px 10px;
 }
 
-.header-right {
-    text-align: right;
+.header-left {
+    text-align: left;
     font-size: 12px;
 }
 #clock { font-size: 14px; }
