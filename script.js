@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "مرحبا بك في العروض el3rod!",
             image: "el3rod-jpg.webp",
             content: `
-                <p>لاختيار عروض أي جمعية اضغط على عروض الجمعيات.</p>
+                <p>لاختيار عروض لأي جمعية اضغط على عروض الجمعيات.</p>
                 
             `
         },
