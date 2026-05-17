@@ -48,6 +48,50 @@ document.addEventListener('DOMContentLoaded', () => {
 <embed width="100%" height="750px" src="https://el3rod.com/kuwait-offers/nesto-hypermarket-kuwait-offers/">
 </div>
 					`
+                },
+				{
+                    id: 'grand_hyper',
+                    title: 'Grand Hyper',
+                    image: 'el3rod-jpg.webp',
+					description: `
+					<div class="project-card">
+<embed width="100%" height="750px" src="https://el3rod.com/kuwait-offers/grand-hyper-kuwait-offers/">
+
+</div>
+					`
+                },
+				{
+                    id: 'city_center',
+                    title: 'City Center',
+                    image: 'el3rod-jpg.webp',
+					description: `
+					<div class="project-card">
+<embed width="100%" height="750px" src="https://el3rod.com/kuwait-offers/city-center-offers/">
+
+</div>
+					`
+                },
+				{
+                    id: 'carrefour',
+                    title: 'Carrefour',
+                    image: 'el3rod-jpg.webp',
+					description: `
+					<div class="project-card">
+<embed width="100%" height="750px" src="https://el3rod.com/kuwait-offers/carrefour-kuwait-offers/">
+
+</div>
+					`
+                },
+				{
+                    id: 'lulu_hyper',
+                    title: 'Lulu Hyper',
+                    image: 'el3rod-jpg.webp',
+					description: `
+					<div class="project-card">
+<embed width="100%" height="750px" src="https://el3rod.com/kuwait-offers/lulu-kuwait-offers/">
+
+</div>
+					`
                 }
             ]
         }
