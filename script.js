@@ -171,8 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
         const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-        const timeString = now.toLocaleTimeString('en-US', timeOptions);
-        const dateDayString = now.toLocaleDateString('en-US', dateOptions);
+        const timeString = now.toLocaleTimeString('ar-KW', timeOptions);
+        const dateDayString = now.toLocaleDateString('ar-KW', dateOptions);
 
         clockElement.textContent = timeString;
         dateDayElement.textContent = dateDayString;
