@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "عروض الجمعيات",
             image: "el3rod-jpg.webp",
             intro: ``,
-            games: [
+            items: [
                 
                 {
                     id: 'alrawda-hawalli',
@@ -115,13 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function setupOthersPage(othersData) {
         const displayArea = document.getElementById('others-display-area');
-        if (!displayArea || !othersData.games || othersData.games.length === 0) return;
+        if (!displayArea || !othersData.items || othersData.items.length === 0) return;
 
-        const navButtonsHTML = othersData.games.map((game, index) =>
-            `<button class="others-nav-btn ${index === 0 ? 'active' : ''}" data-game-id="${game.id}">${game.title}</button>`
+        const navButtonsHTML = othersData.items.map((item, index) =>
+            `<button class="others-nav-btn ${index === 0 ? 'active' : ''}" data-item-id="${item.id}">${item.title}</button>`
         ).join('');
 
-        const firstGame = othersData.games[0];
+        const firstItem = othersData.items[0];
 
         const contentHTML = `
             <div class="others-nav-container">
@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="others-content-display">
                 
-                <div id="others-game-description" class="others-content-text">
-                    ${firstGame.description}
+                <div id="others-item-description" class="others-content-text">
+                    ${firstItem.description}
                 </div>
             </div>
         `;
@@ -141,11 +141,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const navButtons = displayArea.querySelectorAll('.others-nav-btn');
         navButtons.forEach(button => {
             button.addEventListener('click', () => {
-                const gameId = button.getAttribute('data-game-id');
-                const gameData = othersData.games.find(g => g.id === gameId);
-                if (!gameData) return;
+                const itemId = button.getAttribute('data-item-id');
+                const itemData = othersData.items.find(i => i.id === itemId);
+                if (!itemData) return;
 			
-                document.getElementById('others-game-description').innerHTML = gameData.description;
+                document.getElementById('others-item-description').innerHTML = itemData.description;
 
                 navButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
