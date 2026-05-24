@@ -22,7 +22,7 @@
 body {
     font-family: var(--font-body);
 	//background-image: url('Mmsf-pegasus-magic.webp');
-	background-color: lightyellow;
+	background-color: var(--mmsf-bg);
 	background-size: cover;
     background-position: center;
     background-attachment: fixed;
