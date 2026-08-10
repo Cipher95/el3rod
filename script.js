@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
             `
         },
-       		others: {
+       		offers: {
             title: "عروض الجمعيات",
             image: "el3rod-jpg.webp",
             intro: ``,
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     id: 'alrawda-hawalli',
                     title: 'جمعية الروضة وحولي التعاونية',
-                    image: 'others/image_11~0.png',
+                    image: 'offers/image_11~0.png',
 					description: `
 					<div class="project-card">
 <embed width="100%" height="750px" src="https://el3rod.com/kuwait-offers/alrawda-hawalli-co-offers/">
@@ -110,26 +110,26 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     /**
-     * Builds and sets up the interactive content for the 'Others' page.
-     * @param {object} othersData - The 'others' data object from pageData.
+     * Builds and sets up the interactive content for the 'offers' page.
+     * @param {object} offersData - The 'offers' data object from pageData.
      */
-    function setupOthersPage(othersData) {
-        const displayArea = document.getElementById('others-display-area');
-        if (!displayArea || !othersData.items || othersData.items.length === 0) return;
+    function setupoffersPage(offersData) {
+        const displayArea = document.getElementById('offers-display-area');
+        if (!displayArea || !offersData.items || offersData.items.length === 0) return;
 
-        const navButtonsHTML = othersData.items.map((item, index) =>
-            `<button class="others-nav-btn ${index === 0 ? 'active' : ''}" data-item-id="${item.id}">${item.title}</button>`
+        const navButtonsHTML = offersData.items.map((item, index) =>
+            `<button class="offers-nav-btn ${index === 0 ? 'active' : ''}" data-item-id="${item.id}">${item.title}</button>`
         ).join('');
 
-        const firstItem = othersData.items[0];
+        const firstItem = offersData.items[0];
 
         const contentHTML = `
-            <div class="others-nav-container">
+            <div class="offers-nav-container">
                 ${navButtonsHTML}
             </div>
-            <div class="others-content-display">
+            <div class="offers-content-display">
                 
-                <div id="others-item-description" class="others-content-text">
+                <div id="offers-item-description" class="offers-content-text">
                     ${firstItem.description}
                 </div>
             </div>
@@ -138,14 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
         displayArea.innerHTML = contentHTML;
 
 		
-        const navButtons = displayArea.querySelectorAll('.others-nav-btn');
+        const navButtons = displayArea.querySelectorAll('.offers-nav-btn');
         navButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const itemId = button.getAttribute('data-item-id');
-                const itemData = othersData.items.find(i => i.id === itemId);
+                const itemData = offersData.items.find(i => i.id === itemId);
                 if (!itemData) return;
 			
-                document.getElementById('others-item-description').innerHTML = itemData.description;
+                document.getElementById('offers-item-description').innerHTML = itemData.description;
 
                 navButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
@@ -174,10 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
             contentHTML = data.content;
         }
 
-        // OTHERS PAGE
-        else if (pageKey === 'others') {
+        // offers PAGE
+        else if (pageKey === 'offers') {
             contentHTML = `
-                <div id="others-display-area"></div>
+                <div id="offers-display-area"></div>
             `;
         }
 
@@ -198,8 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
         contentArea.innerHTML = html;
 
         // setup interactive section
-        if (pageKey === 'others') {
-            setupOthersPage(data);
+        if (pageKey === 'offers') {
+            setupoffersPage(data);
         }
 
         contentArea.classList.remove('fade-out');
